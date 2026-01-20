@@ -1,0 +1,47 @@
+# R artifacts
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.Ruserdata
+
+# R Markdown cache
+*_cache/
+*_files/
+
+# Knitr cache
+cache/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# QIIME2 artifacts (large files - keep .qza/.qzv in separate data storage)
+*.qza
+*.qzv
+
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.envrc
