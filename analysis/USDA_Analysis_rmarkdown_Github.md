@@ -427,7 +427,7 @@ barplot_class = comp_barplot(phy_cleaned, tax_level = "Class", n_taxa = 20, bar_
 barplot_class
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](../figures/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 ggsave("hatchery_2017-2019_barplots_class.png", height = 18, width = 12)
@@ -474,7 +474,7 @@ phy_cleaned_family_comp
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](../figures/unnamed-chunk-5-1.png)<!-- -->
 
 ```r
 ggsave("hatchery_2017-2019_boxplots_family.png", height = 10, width = 20)
@@ -525,7 +525,7 @@ phy_cleaned_phylum_comp
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](../figures/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 ggsave("hatchery_2017-2019_boxplots_phylum.png", height = 10, width = 18)
@@ -568,7 +568,7 @@ phy_cleaned_class_comp
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](../figures/unnamed-chunk-7-1.png)<!-- -->
 
 ```r
 ggsave("hatchery_2017-2019_boxplots_class.png", height = 10, width = 20)
@@ -626,7 +626,7 @@ faith = faith + theme_bw() + theme(axis.text.x = element_blank(), axis.title.x =
 faith
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](../figures/unnamed-chunk-8-1.png)<!-- -->
 
 ```r
 merged_for_faith %>% group_by(Sample_Type) %>% shapiro_test(PD)
@@ -655,7 +655,7 @@ shannon_hatchery_samptype = shannon_hatchery_samptype + theme_bw() + theme(axis.
 shannon_hatchery_samptype
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
+![](../figures/unnamed-chunk-8-2.png)<!-- -->
 
 ```r
 shannon_wilcox_all_groups = shannon_hatchery_samptype$data %>% wilcox_test(value ~ Sample_Type)
@@ -667,7 +667,7 @@ alpha_diversity = alpha_diversity + plot_annotation(tag_levels = 'A') + plot_lay
 alpha_diversity
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-8-3.png)<!-- -->
+![](../figures/unnamed-chunk-8-3.png)<!-- -->
 
 ```r
 ggsave("alpha_sample_type.png", height = 4, width = 6)
@@ -704,7 +704,7 @@ bray_all_hatchery
 ## Warning in MASS::cov.trob(data[, vars]): Probable convergence failure
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](../figures/unnamed-chunk-9-1.png)<!-- -->
 
 ```r
 ggsave("bray_hatchery.png", height = 6, width = 8)
@@ -839,7 +839,7 @@ gunifrac_all_hatchery = phy_cleaned_rarefy %>%
 gunifrac_all_hatchery
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
+![](../figures/unnamed-chunk-9-2.png)<!-- -->
 
 ```r
 ggsave("gunifrac_hatchery.png", height = 6, width = 8)
@@ -875,7 +875,7 @@ jaccard_all_hatchery = phy_cleaned_rarefy %>%
 jaccard_all_hatchery
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-9-3.png)<!-- -->
+![](../figures/unnamed-chunk-9-3.png)<!-- -->
 
 ```r
 ggsave("jaccard_hatchery.png", height = 6, width = 8)
@@ -994,7 +994,7 @@ wunifrac_all_hatchery = phy_cleaned_rarefy %>%
 wunifrac_all_hatchery
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-9-4.png)<!-- -->
+![](../figures/unnamed-chunk-9-4.png)<!-- -->
 
 ```r
 ggsave("wunifrac_hatchery.png", height = 6, width = 8)
@@ -1084,7 +1084,7 @@ unifrac_all_hatchery = phy_cleaned_rarefy %>%
 unifrac_all_hatchery
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-9-5.png)<!-- -->
+![](../figures/unnamed-chunk-9-5.png)<!-- -->
 
 ```r
 ggsave("unifrac_hatchery.png", height = 6, width = 8)
@@ -1161,7 +1161,7 @@ hatchery_ordinations + plot_annotation(tag_levels = "A") + plot_layout(guides = 
 ## Warning in MASS::cov.trob(data[, vars]): Probable convergence failure
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-9-6.png)<!-- -->
+![](../figures/unnamed-chunk-9-6.png)<!-- -->
 
 ```r
 ggsave("all_ordinations_hatchery.png", height = 8, width = 12)
@@ -3097,7 +3097,7 @@ ann_colors = list(
 heatmap = pheatmap(log10(classtab_reorder+1), cluster_rows = FALSE, cluster_cols = T, annotation_row = phyla_frame, annotation_col = sample_type_frame, angle_col = "315", fontsize_row = 10, fontsize_col = 8, show_colnames = F, border_color = NA, annotation_colors = ann_colors, clustering_distance_cols = "correlation", legend_breaks = c(0.5, 1, 1.5, 2))
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](../figures/unnamed-chunk-10-1.png)<!-- -->
 
 ```r
 ggsave("heatmap.png", width = 16, height = 12)
@@ -3136,7 +3136,7 @@ venn_family_inflow = ps_venn(phy_cleaned_inflow_only_with_surfaces_family, group
 venn_family_inflow
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](../figures/unnamed-chunk-11-1.png)<!-- -->
 
 ```r
 ps_venn(phy_cleaned_inflow_only_with_surfaces_family, group = "Sample_Type", fraction = 0, plot = F)
@@ -3311,7 +3311,7 @@ venn_family_outflow = ps_venn(phy_cleaned_outflow_only_with_surfaces_family, gro
 venn_family_outflow
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-11-2.png)<!-- -->
+![](../figures/unnamed-chunk-11-2.png)<!-- -->
 
 ```r
 quartz.save("venn_family_outflow.png", type = "png", dpi = 300)
@@ -3339,7 +3339,7 @@ venn_class_inflow = ps_venn(phy_cleaned_inflow_only_with_surfaces_class, group =
 venn_class_inflow
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-11-3.png)<!-- -->
+![](../figures/unnamed-chunk-11-3.png)<!-- -->
 
 ```r
 ps_venn(phy_cleaned_inflow_only_with_surfaces_class, group = "Sample_Type", fraction = 0, plot = F)
@@ -3396,7 +3396,7 @@ venn_class_outflow = ps_venn(phy_cleaned_outflow_only_with_surfaces_class, group
 venn_class_outflow
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-11-4.png)<!-- -->
+![](../figures/unnamed-chunk-11-4.png)<!-- -->
 
 ```r
 quartz.save("venn_class_outflow.png", type = "png", dpi = 300)
@@ -4535,7 +4535,7 @@ waterfall_plot_baffles_walls = ggplot(data = df_fig,
 waterfall_plot_baffles_walls
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](../figures/unnamed-chunk-12-1.png)<!-- -->
 
 ```r
 res_walls_baffles_family$diff_abn
@@ -5566,7 +5566,7 @@ waterfall_plot_baffles_walls = ggplot(data = walls_baffles_fig,
 waterfall_plot_baffles_walls
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](../figures/unnamed-chunk-13-1.png)<!-- -->
 
 ```r
 #Baffles vs Tailscreens
@@ -5974,7 +5974,7 @@ waterfall_plot_baffles_tailscreens = ggplot(data = baffles_tailscreens_fig,
 waterfall_plot_baffles_tailscreens
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-13-2.png)<!-- -->
+![](../figures/unnamed-chunk-13-2.png)<!-- -->
 
 ```r
 #Tailscreens vs Walls
@@ -6318,7 +6318,7 @@ waterfall_plot_tailscreens_walls = ggplot(data = tailscreens_walls_fig,
 waterfall_plot_tailscreens_walls
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-13-3.png)<!-- -->
+![](../figures/unnamed-chunk-13-3.png)<!-- -->
 
 
 ```r
@@ -6704,7 +6704,7 @@ fc_diseased_healthy_comp
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](../figures/unnamed-chunk-15-1.png)<!-- -->
 
 ```r
 ggsave("F_columnare_diseased_healthy_comparison.png", width = 4, height = 6)
@@ -6752,7 +6752,7 @@ fc_diseased_healthy_comp_water
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-15-2.png)<!-- -->
+![](../figures/unnamed-chunk-15-2.png)<!-- -->
 
 ```r
 #surfaces only
@@ -6776,7 +6776,7 @@ fc_diseased_healthy_comp_surfaces
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-15-3.png)<!-- -->
+![](../figures/unnamed-chunk-15-3.png)<!-- -->
 
 ```r
 #patchwork
@@ -6789,7 +6789,7 @@ columnare_abundance_comp + plot_annotation(tag_levels = "A")
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-15-4.png)<!-- -->
+![](../figures/unnamed-chunk-15-4.png)<!-- -->
 
 ```r
 ggsave("columnare_abundance_comparison_sample_type.png", height = 6, width = 10)
@@ -6905,7 +6905,7 @@ fc_diseased_healthy_comp_inflow_outflow
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-15-5.png)<!-- -->
+![](../figures/unnamed-chunk-15-5.png)<!-- -->
 
 ```r
 ggsave("columnare_abundance_comparison_inflow_outflow.png", height = 3, width = 5)
@@ -6935,7 +6935,7 @@ columnare_abundance_three_figures + plot_annotation(tag_levels = "A")
 ## Bin width defaults to 1/30 of the range of the data. Pick better value with `binwidth`.
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-15-6.png)<!-- -->
+![](../figures/unnamed-chunk-15-6.png)<!-- -->
 
 ```r
 ggsave("columnare_abundance_comparison_p_symbol.png", height = 4, width = 10)
@@ -7208,7 +7208,7 @@ bray_three_sites
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](../figures/unnamed-chunk-17-1.png)<!-- -->
 
 All Samples - Jaccard
 
@@ -7256,7 +7256,7 @@ jaccard_three_sites
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](../figures/unnamed-chunk-18-1.png)<!-- -->
 
 All Samples - Weighted Unifrac
 
@@ -7300,7 +7300,7 @@ wunifrac_three_sites
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
+![](../figures/unnamed-chunk-19-1.png)<!-- -->
 
 All Samples - Unweighted Unifrac
 
@@ -7344,7 +7344,7 @@ unifrac_three_sites
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+![](../figures/unnamed-chunk-20-1.png)<!-- -->
 
 Permanova - All Samples
 
@@ -7508,7 +7508,7 @@ bray_three_sites_surfaces = bray_three_sites_surfaces + scale_colour_discrete(la
 bray_three_sites_surfaces
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
+![](../figures/unnamed-chunk-22-1.png)<!-- -->
 
 Surface Samples - Jaccard
 
@@ -7536,7 +7536,7 @@ jaccard_three_sites_surfaces = jaccard_three_sites_surfaces + scale_colour_discr
 jaccard_three_sites_surfaces
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+![](../figures/unnamed-chunk-23-1.png)<!-- -->
 
 Surface Samples - Weighted Unifrac
 
@@ -7564,7 +7564,7 @@ wunifrac_three_sites_surfaces = wunifrac_three_sites_surfaces + scale_colour_dis
 wunifrac_three_sites_surfaces
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
+![](../figures/unnamed-chunk-24-1.png)<!-- -->
 
 Surface Samples - Unweighted Unifrac
 
@@ -7592,7 +7592,7 @@ unifrac_three_sites_surfaces = unifrac_three_sites_surfaces + scale_colour_discr
 unifrac_three_sites_surfaces
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
+![](../figures/unnamed-chunk-25-1.png)<!-- -->
 
 Permanova - Surface Samples
 
@@ -8528,7 +8528,7 @@ bray_three_sites_water = bray_three_sites_water + scale_shape_discrete(labels = 
 bray_three_sites_water
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
+![](../figures/unnamed-chunk-27-1.png)<!-- -->
 
 Water Samples - Jaccard
 
@@ -8564,7 +8564,7 @@ jaccard_three_sites_water = jaccard_three_sites_water + scale_shape_discrete(lab
 jaccard_three_sites_water
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
+![](../figures/unnamed-chunk-28-1.png)<!-- -->
 
 Water Samples - Weighted Unifrac
 
@@ -8600,7 +8600,7 @@ wunifrac_three_sites_water = wunifrac_three_sites_water + scale_shape_discrete(l
 wunifrac_three_sites_water
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-29-1.png)<!-- -->
+![](../figures/unnamed-chunk-29-1.png)<!-- -->
 
 Water Samples - Unweighted Unifrac
 
@@ -8636,7 +8636,7 @@ unifrac_three_sites_water = unifrac_three_sites_water + scale_shape_discrete(lab
 unifrac_three_sites_water
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-30-1.png)<!-- -->
+![](../figures/unnamed-chunk-30-1.png)<!-- -->
 
 Permanova - Water Samples
 
@@ -9530,7 +9530,7 @@ MDS_patchwork
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-32-1.png)<!-- -->
+![](../figures/unnamed-chunk-32-1.png)<!-- -->
 
 ```r
 ggsave("three_sites_wunifrac.png", width = 6, height = 10)
@@ -9577,7 +9577,7 @@ MDS_patchwork
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-33-1.png)<!-- -->
+![](../figures/unnamed-chunk-33-1.png)<!-- -->
 
 ```r
 ggsave("three_sites_unifrac.png", width = 6, height = 10)
@@ -9628,7 +9628,7 @@ MDS_patchwork
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-34-1.png)<!-- -->
+![](../figures/unnamed-chunk-34-1.png)<!-- -->
 
 ```r
 ggsave("three_sites_bray.png", width = 6, height = 10)
@@ -9685,7 +9685,7 @@ MDS_patchwork
 ## Warning: Removed 1 row(s) containing missing values (geom_path).
 ```
 
-![](USDA_Analysis_rmarkdown_Github_files/figure-html/unnamed-chunk-35-1.png)<!-- -->
+![](../figures/unnamed-chunk-35-1.png)<!-- -->
 
 ```r
 ggsave("three_sites_jaccard.png", width = 6, height = 10)
