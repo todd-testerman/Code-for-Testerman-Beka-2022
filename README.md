@@ -1,6 +1,8 @@
-# Trout Aquaculture Microbiome Analysis
+# A Large-Scale, Multi-Year Microbial Community Survey of a Freshwater Trout Aquaculture Facility
 
-Code used to process, analyze, and visualize microbiome data from a trout aquaculture facility. This repository contains the complete bioinformatics and statistical analysis pipeline for 16S rRNA gene sequencing data collected from USDA research (2017-2019).
+[![DOI](https://img.shields.io/badge/DOI-10.1093%2Ffemsec%2Ffiac101-blue)](https://doi.org/10.1093/femsec/fiac101)
+
+Code used to process, analyze, and visualize microbiome data from a trout aquaculture facility. This repository contains the complete bioinformatics and statistical analysis pipeline for 16S rRNA gene sequencing data published in [FEMS Microbiology Ecology](https://doi.org/10.1093/femsec/fiac101).
 
 ## Project Overview
 
@@ -102,11 +104,35 @@ The analysis addresses several research questions:
 
 ## Authors
 
-Todd Testerman
+- **Todd Testerman** - University of Connecticut, Department of Molecular and Cell Biology
+- **Lidia Beka** - University of Connecticut, Department of Molecular and Cell Biology
+- **Stephen R. Reichley** - Riverence Provisions LLC
+- **Stacy King** - Riverence Provisions LLC
+- **Timothy J. Welch** - USDA/ARS National Center for Cool and Cold Water Aquaculture
+- **Gregory D. Wiens** - USDA/ARS National Center for Cool and Cold Water Aquaculture
+- **Joerg Graf** - University of Connecticut, Department of Molecular and Cell Biology
 
 ## Citation
 
-If you use this code, please cite the associated publication.
+If you use this code or data, please cite:
+
+> Testerman T, Beka L, Reichley SR, King S, Welch TJ, Wiens GD, Graf J. **A large-scale, multi-year microbial community survey of a freshwater trout aquaculture facility.** *FEMS Microbiology Ecology*. 2022;98(10):fiac101. doi: [10.1093/femsec/fiac101](https://doi.org/10.1093/femsec/fiac101)
+
+### BibTeX
+
+```bibtex
+@article{testerman2022large,
+  title={A large-scale, multi-year microbial community survey of a freshwater trout aquaculture facility},
+  author={Testerman, Todd and Beka, Lidia and Reichley, Stephen R and King, Stacy and Welch, Timothy J and Wiens, Gregory D and Graf, Joerg},
+  journal={FEMS Microbiology Ecology},
+  volume={98},
+  number={10},
+  pages={fiac101},
+  year={2022},
+  publisher={Oxford University Press},
+  doi={10.1093/femsec/fiac101}
+}
+```
 
 ## License
 
